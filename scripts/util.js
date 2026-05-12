@@ -27,5 +27,16 @@ export function calcularPedidos(entrada) {
             clientes[cliente].categorias.push({ nombre: categoria, gasto: precio * cantidad });
         }
     }
+
+for (const cliente in clientes) {
+    let max = clientes[cliente].categorias[0];
+    for (let i = 1; i < clientes[cliente].categorias.length; i++) {
+        if (clientes[cliente].categorias[i].gasto > max.gasto) {
+            max = clientes[cliente].categorias[i];
+        }
+    }
+    clientes[cliente].categoriaFavorita = max.nombre;
+}
+
     return clientes;
 }
