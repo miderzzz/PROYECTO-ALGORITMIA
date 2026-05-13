@@ -1,5 +1,6 @@
 export function calcularPedidos(entrada) {
-    const pedidos = entrada.split(';');
+    const separar = entrada.split("--");
+    const pedidos = separar[1].split(';');
     const clientes = {};
     for (let i = 0; i < pedidos.length; i++) {
         const pedido = pedidos[i].split(" ");
