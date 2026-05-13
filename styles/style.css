@@ -35,4 +35,8 @@ h1 {
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
+    border: solid 3px white;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: black;
 }
